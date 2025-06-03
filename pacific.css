@@ -1,0 +1,126 @@
+/* Reset layout elements for consistent block display */
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+    display: block;
+}
+
+/* BODY STYLING */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, #e0f4fc, #00569f);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER stays on top */
+header {
+    margin: 0;
+    padding: 10px;
+    background: url("sunset.jpg") no-repeat right;
+    background-color: #000033;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* MAIN WRAPPER — holds nav + content side by side */
+#wrapper {
+    width: 80%;
+    min-width: 600px;
+    margin: 20px auto 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden; /* helps clear floats globally */
+}
+
+#wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* SIDEBAR */
+nav {
+    float: left;
+    width: 160px;
+    height: calc(100vh - 120px); /* full height minus header/footer */
+    padding: 20px;
+    background-color: #c0d6e4;
+}
+
+/* NAV LINKS */
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    color: #344873;
+}
+
+nav a:hover {
+    background-color: #344873;
+    color: #ffffff;
+}
+
+/* CONTENT SECTION */
+#content {
+    margin-left: 200px;
+    padding: 20px;
+    overflow: auto; /* ensures container wraps floated image */
+}
+
+h2 {
+    color: #3399CC;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.resort {
+    font-weight: bold;
+    color: #5c7fa3;
+}
+
+ul {
+    list-style-image: url("marker.gif");
+}
+
+/* CONTACT INFORMATION */
+#contact {
+    font-size: 90%;
+    margin-top: 20px;
+}
+
+/* FOOTER stays below everything */
+footer {
+    margin-left: 200px;  /* This aligns it with the content block */
+    text-align: left;
+    font-family: Georgia, "Times New Roman", serif;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #666666;
+	margin-top: 20px;
+}
+
+img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: auto;
+    height: auto;
+	max-width: 300px;
+    height: auto;
+}
